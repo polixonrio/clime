@@ -449,16 +449,16 @@
         <div class="row g-5">
           <div class="col-lg-4 col-md-6" data-wow-delay="0.3s">
             <div class="shadow rounded-2 py-3 border text-center mx-auto">
-              <iframe
-                class="rounded-2"
+                <iframe
+                class="rounded-2 lazy-iframe"
                 loading="lazy"
                 width="280"
-                src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
+                src=""
+                data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
                 frameborder="0"
                 allowfullscreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 title="College Students Develop mobile app in lockdown and start earning | NAGPUR"
-                id="widget2"
               ></iframe>
 
               <div class="card-body">
@@ -481,6 +481,7 @@
             >
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe
+                class="rounded-2 lazy-iframe"
                   loading="lazy"
                   width="280"
                   src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
@@ -511,6 +512,7 @@
             >
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe
+                class="rounded-2 lazy-iframe"
                   loading="lazy"
                   width="280"
                   src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
@@ -542,6 +544,7 @@
             >
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe
+                class="rounded-2 lazy-iframe"
                   loading="lazy"
                   width="280"
                   src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
@@ -573,6 +576,7 @@
             >
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe
+                class="rounded-2 lazy-iframe"
                   loading="lazy"
                   width="280"
                   src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
@@ -1170,5 +1174,28 @@
         popup.childNodes[1].classList.remove("showPopup");
       });
     </script>
+     <script>
+    function lazyLoadIframe(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const iframe = entry.target;
+          iframe.src = iframe.dataset.src;
+          iframe.classList.remove('lazy-iframe');
+          observer.unobserve(iframe);
+        }
+      });
+    }
+
+    const lazyIframes = document.querySelectorAll('.lazy-iframe');
+
+    const observer = new IntersectionObserver(lazyLoadIframe, {
+      rootMargin: '0px',
+      threshold: 0.1 // Adjust this value based on your needs
+    });
+
+    lazyIframes.forEach(iframe => {
+      observer.observe(iframe);
+    });
+  </script>
   </body>
 </html>
