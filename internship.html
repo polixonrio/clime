@@ -83,6 +83,22 @@
         pointer-events: all;
         overflow: hidden;
       }
+
+      .video-container {
+    height: 500px;
+    width: 100%;
+
+    position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
     </style>
   </head>
 
@@ -190,11 +206,19 @@
         </div>
       </nav>
 
-      <div
-        class="container-fluid bg-primary py-5 bg-header-1"
-        style="padding-top: 5em !important; margin-bottom: 90px"
+      <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="./img/us.webm" type="video/webm">
+            <!-- Add additional source elements for different video formats if needed -->
+          </video>
+          <div
+        class="container-fluid  py-5 "
+  
       >
-        <div class="row py-5">
+      <div class="caption">
+
+        <div class="row py-5" style=" position: relative;
+       ">
           <div class="col-12 pt-lg-5 mt-lg-5 text-center">
             <h1 class="display-4 text-white animated zoomIn">Internships</h1>
             <a href="index.html" class="h5 text-white">Home</a>
@@ -202,7 +226,14 @@
             <a href="#" class="h5 text-white">Internship</a>
           </div>
         </div>
+    </div>
+
       </div>
+    </div>
+
+     
+      
+      
     </div>
     <!-- Navbar End -->
 
@@ -258,7 +289,7 @@ src="./img/shutterstock_1033446238_qvhlvr_c_scale,w_774.webp"
     </div>
     <!-- Full Screen Search End -->
 
-    <div class="container-fluid facts pt-lg-0">
+    <div class="container-fluid mt-5 facts pt-lg-0">
       <div class="container pt-lg-0">
         <div class="row gx-0">
           <div class="col-lg-3 wow zoomIn" data-wow-delay="0.1s">
