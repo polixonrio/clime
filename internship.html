@@ -26,10 +26,56 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+  
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
     <script type="text/javascript" defer="true"></script>
+    <style>
+
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+    display: grid;
+    place-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out opacity;
+}
+.popup-content {
+    width: clamp(300px, 90vw, 500px);
+    background-color: #fff;
+    padding: clamp(1.5rem, 100vw, 3rem);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    border-radius: .5em;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: 200ms ease-in-out opacity,
+                200ms ease-in-out transform;
+    position: relative;
+}
+.popup h1 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.popup h1:active {
+    transform: scale(.9);
+}
+
+.showPopup {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+    </style>
 
 </head>
 
@@ -39,6 +85,9 @@
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
+
+
+
 
 
     <!-- Topbar Start -->
@@ -89,7 +138,7 @@
             </div>
         </nav>
 
-        <div class="container-fluid bg-primary py-5 bg-header-1" style="margin-bottom: 90px;">
+        <div class="container-fluid bg-primary py-5 bg-header-1" style="padding-top:5em!important; margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-white animated zoomIn">Internships</h1>
@@ -102,6 +151,13 @@
     </div>
     <!-- Navbar End -->
 
+    <div class="popup">
+        <div class="popup-content">
+            <h1>X</h1>
+            <h2>Subscribe...</h2>
+            <p>And some dummy content that shows on this popup Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ratione quisquam iure libero impedit aspernatur, expedita quaerat mollitia delectus, eius ad excepturi inventore aperiam perspiciatis voluptatum porro. Tenetur libero, aspernatur nobis quod autem assumenda, nostrum esse reiciendis quibusdam vitae iure harum illum similique consectetur ut ipsam, at repellendus! Nulla est debitis illo.</p>
+        </div>
+    </div>
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -122,8 +178,8 @@
     <!-- Full Screen Search End -->
 
 
-    <div class="container-fluid facts pt-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
+    <div class="container-fluid facts  pt-lg-0">
+        <div class="container pt-lg-0">
             <div class="row gx-0">
                 <div class="col-lg-3 wow zoomIn" data-wow-delay="0.1s">
                     <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 100px;">
@@ -131,8 +187,8 @@
                             <i class="fa fa-users text-primary"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-white mb-0"style="width: 167px;">Our Customers</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">70</h1>
+                            <h5 class="text-white mb-0"style="width: 167px;">Happy Interns</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">100</h1>
                         </div>
                     </div>
                 </div>
@@ -142,8 +198,8 @@
                             <i class="fa fa-check text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-primary mb-0" style="width: 167px;">Happy clients</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">100</h1>
+                            <h5 class="text-primary mb-0" style="width: 167px;">Total Trainers</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">20</h1>
                         </div>
                     </div>
                 </div>
@@ -153,7 +209,7 @@
                             <i class="fa fa-award text-primary"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-white mb-0"style="width: 167px;">Projects Complete</h5>
+                            <h5 class="text-white mb-0"style="width: 167px;">Abroad Interns</h5>
                             <h1 class="text-white mb-0" data-toggle="counter-up">50</h1>
                         </div>
                     </div>
@@ -166,7 +222,7 @@
                         <div class="ps-4">
                             <h5 class="text-primary mb-0"style="width: 167px;"
                             
-                             >Cofee with clients</h5>
+                             >Hours Of Support</h5>
                             <h1 class="mb-0" data-toggle="counter-up">250</h1>
                         </div>
                     </div>
@@ -177,8 +233,11 @@
     </div>
 
 
+
+
+
     <!-- domains Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
@@ -189,7 +248,7 @@
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
         
-                        <h4 class="mb-3">Data Science
+                        <h4 class="mb-3">Web Development
                         </h4>
                         <p class="m-0">
                             Asterisc Technocrat is a global team members creating digital experiences. Our company that develops websites building the low-cost & best quality with advanced technology integration can be done here.</p>
@@ -201,7 +260,7 @@
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
   
-                        <h4 class="mb-3">Artificial Intelligence
+                        <h4 class="mb-3">Machine Learning
                         </h4>
                         <p class="m-0">
                             Our Android team Development of User-friendly Applications with high-quality development process. Creative & Imaginative Designers in-depth Business Understanding of the App Security of Data.
@@ -215,7 +274,7 @@
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
            
-                        <h4 class="mb-3">Python Development
+                        <h4 class="mb-3">Content Writing
                         </h4>
                         <p class="m-0">Some of Our E-commerce Websites development has quick page load time and an easy checkout process. Intuitive design and product updates, event information, special offers and some of the new features.</p>
                         <a class="btn btn-lg btn-primary rounded" href="#">
@@ -226,7 +285,7 @@
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 
-                        <h4 class="mb-3">Web Development
+                        <h4 class="mb-3">Digital Marketing
                         </h4>
                         <p class="m-0">
                             We are best digital marketing team members regularly undergoes training as the digital world is continuously changing. Our experts ensure the brands reaches the targeted audience at the scheduled time.</p>
@@ -239,7 +298,7 @@
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
      
-                        <h4 class="mb-3">Android Development
+                        <h4 class="mb-3">Human Resources (HR)
                         </h4>
                         <p class="m-0">Our team members makes products and brands stand out from the competitors. We offerd service Logo, Graphic, Brochure, Website, Packaging , Exhibition & Event Design, Social Media Marketing & Media Ads, Branding.
                         </p>
@@ -248,54 +307,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-   
-                        <h4 class="mb-3">Java Developement
-                        </h4>
-                        <p class="m-0">
-                            Our company provides IOT based services that allows the automation of daily tasks and enable and control of the connected to another devices. This results in improved more efficient and convenient in performing tasks.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="#">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-   
-                        <h4 class="mb-3">Graphic Design
-                        </h4>
-                        <p class="m-0">
-                            Our company provides IOT based services that allows the automation of daily tasks and enable and control of the connected to another devices. This results in improved more efficient and convenient in performing tasks.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="#">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-   
-                        <h4 class="mb-3">Content Writer
-                        </h4>
-                        <p class="m-0">
-                            Our company provides IOT based services that allows the automation of daily tasks and enable and control of the connected to another devices. This results in improved more efficient and convenient in performing tasks.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="#">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-   
-                        <h4 class="mb-3">Content Writer
-                        </h4>
-                        <p class="m-0">
-                            Our company provides IOT based services that allows the automation of daily tasks and enable and control of the connected to another devices. This results in improved more efficient and convenient in performing tasks.</p>
-                        <a class="btn btn-lg btn-primary rounded" href="#">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+            
 
             </div>
         </div>
@@ -328,11 +340,11 @@
 
 
                         <div class="card-body">
-                          <h5 class="text-center pt-2 card-title">Data Science
+                          <h5 class="text-center pt-2 card-title">Web Development
                         </h5>
                           <p class="text-center card-text">Position- Intern <br>
-                            Location- Remote<br>
-                            Duration- 1 Month.</p>
+                            Location - Remote<br>
+                            Duration - 1 Month.</p>
                          <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
                         </div>
                       </div>
@@ -341,61 +353,6 @@
       
 
                 
-
-
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="card py-3 shadow border text-center mx-auto justify-content-center">
-                        <div class="embed-responsive embed-responsive-16by9">
-
-                        <iframe
-                        loading="lazy"
-                        width="280"
-                        src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                        frameborder="0"
-                        allowfullscreen
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        title="College Students Develop mobile app in lockdown and start earning | NAGPUR"
-                        data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                        id="widget2" /></iframe></div>
-
-                        <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Artificial Intelligence
-
-                          </h5>
-                            <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
-                           <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
-                          </div>
-                      </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 wow  zoomIn" data-wow-delay="0.3s">
-                    <div class="card py-3 shadow border text-center mx-auto justify-content-center" >
-                        <div class="embed-responsive embed-responsive-16by9">
-
-                            <iframe
-                            loading="lazy"
-                            width="280"
-                            src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                            frameborder="0"
-                            allowfullscreen
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            title="College Students Develop mobile app in lockdown and start earning | NAGPUR"
-                            data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                            id="widget2" /></iframe></div>
-                        <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Python Development
-
-                          </h5>
-                            <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
-                           <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
-                          </div>
-                      </div>
-                </div>
-                
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                     <div class="card py-3 shadow border text-center mx-auto justify-content-center" >
                         <div class="embed-responsive embed-responsive-16by9">
@@ -411,12 +368,12 @@
                             data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
                             id="widget2" /></iframe></div>
                         <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Web Development
+                            <h5 class="text-center pt-2 card-title">Machine Learning
 
                           </h5>
                             <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
+                              Location - Remote<br>
+                              Duration - 1 Month.</p>
                            <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
                           </div>
                       </div>
@@ -441,8 +398,8 @@
 
                           </h5>
                             <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
+                              Location - Remote<br>
+                              Duration - 1 Month.</p>
                            <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
                           </div>
                       </div>
@@ -463,42 +420,18 @@
                             data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
                             id="widget2" /></iframe></div>
                         <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Java Developement
+                            <h5 class="text-center pt-2 card-title">Content Writing
 
                           </h5>
                             <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
+                              Location - Remote<br>
+                              Duration - 1 Month.</p>
                            <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
                           </div>
                       </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="card py-3 shadow border text-center mx-auto justify-content-center" >
-                        <div class="embed-responsive embed-responsive-16by9">
-
-                            <iframe
-                            loading="lazy"
-                            width="280"
-                            src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                            frameborder="0"
-                            allowfullscreen
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            title="College Students Develop mobile app in lockdown and start earning | NAGPUR"
-                            data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                            id="widget2" /></iframe></div>
-                        <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Graphic Design
-
-                          </h5>
-                            <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
-                           <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
-                          </div>
-                      </div>
-                </div>
+               
 
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                     <div class="card py-3 shadow border text-center mx-auto justify-content-center">
@@ -515,7 +448,7 @@
                             data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
                             id="widget2" /></iframe></div>
                         <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Content Writer
+                            <h5 class="text-center pt-2 card-title">Human Resources
 
                           </h5>
                             <p class="text-center card-text">Position- Intern <br>
@@ -527,30 +460,7 @@
                         </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="card py-3 shadow border text-center mx-auto justify-content-center">
-                        <div class="embed-responsive embed-responsive-16by9">
-
-                            <iframe
-                            loading="lazy"
-                            src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                            frameborder="0"
-                            allowfullscreen
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            title="College Students Develop mobile app in lockdown and start earning | NAGPUR"
-                            data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
-                            id="widget2" /></iframe></div>
-                        <div class="card-body">
-                            <h5 class="text-center pt-2 card-title">Content Writer
-
-                          </h5>
-                            <p class="text-center card-text">Position- Intern <br>
-                              Location- Remote<br>
-                              Duration- 1 Month.</p>
-                           <div class="text-center"> <a href="#" class="btn text-center btn-primary">Apply Now</a></div>
-                          </div>
-                      </div>
-                </div>
+                
 
             </div>
         </div>
@@ -651,7 +561,7 @@
                     <h3>Get Letter of Recommendation
 
                   </h3>
-                    <p class="mb-0">If your are meeting to criteria of project completion then you will get letter of recommendation from CodeClause.
+                    <p class="mb-0">If your are meeting to criteria of project completion then you will get letter of recommendation from Asterisc.
 
                   </p>
                   </div>
@@ -661,11 +571,11 @@
               <div class="timeline right">
                 <div class="card">
                   <div class="card-body p-4">
-                    <h3>Earn Swags & Rewards
+                    <h3>Certificates and Goodies
 
 
                   </h3>
-                    <p class="mb-0">If your are meeting to criteria of project completion then you will get Swags & Rewards from CodeClause.
+                    <p class="mb-0">After successful internship completion, We provide certificates and goodies to our trainee.
 
                   </p>
                   </div>
@@ -830,7 +740,21 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="lib/wow/wow.min.js"></script> -->
+      <script src="lib/wow/wow.min.js"></script>
+      <script>
+        const popup = document.querySelector('.popup');
+        const x = document.querySelector('.popup-content h1')
+
+        window.addEventListener('load', () => {
+            popup.classList.add('showPopup');
+            popup.childNodes[1].classList.add('showPopup');
+        })
+        x.addEventListener('click', () => {
+            popup.classList.remove('showPopup');
+            popup.childNodes[1].classList.remove('showPopup');
+        })
+    </script>
+
       <!-- <script src="lib/easing/easing.min.js">
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
