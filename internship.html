@@ -36,6 +36,7 @@
 .popup {
     position: fixed;
     top: 0;
+    z-index:99;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, .3);
@@ -67,12 +68,15 @@
 }
 .popup h1:active {
     transform: scale(.9);
+    overflow: hidden;
 }
 
 .showPopup {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
+    overflow: hidden;
+
 }
 
     </style>
@@ -243,6 +247,8 @@
                 <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
                  We Asterisc Technocrat provide a complete e-Commerce digital services & software solutions with
                     product management, online payment Geatway.
+                    <a href="https://wa.me/+917744822228" class="btn text-center mx-auto btn-primary mt-3 py-3 px-5">Reach us on Whatsapp!</a>
+
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
