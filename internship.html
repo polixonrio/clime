@@ -85,10 +85,22 @@
       }
 
       .video-container {
-    height: 500px;
     width: 100%;
-
     position: relative;
+}
+
+@media (max-width: 767px) {
+    /* Styles for phone-sized screens */
+    .video-container {
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Styles for larger screens */
+    .video-container {
+        height: 500px;
+    }
 }
 
 .video-container video {
@@ -208,7 +220,7 @@
             <!-- Add additional source elements for different video formats if needed -->
           </video>
           <div
-        class="container-fluid  py-5 "
+        class="container-fluid   "
   
       >
       <div class="caption">
