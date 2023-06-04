@@ -1,148 +1,234 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   
 
-    <style>
-     * {
-       box-sizing: border-box;
-     }
-     body {
-       background: #E5F4FF;
-       overflow: hidden;
-       height: 100%;
-       width: 100%;
-       padding: 0;
-       margin: 0;
-     }
-     #confetti-container {
-       width: 100vw;
-       height: 100vh;
-       position:relative;
-     }
-     .confetti {
-       position: absolute;
-       z-index: 999;
-     }
-     .confetti .rotate {
-       animation: driftRotate 1s infinite both ease-in-out;
-       width: 100%;
-       height: 100%;
-     }
-     .confetti .askew {
-       width: 100%;
-       height: 100%;
-       animation: drift 1s infinite alternate both ease-in-out;
-     }
-     @for $i from 0 to $n {  
-       .confetti:nth-child(#{$i}) .askew {
-         $time: 1s + random(100)*.01s;
-         animation-duration: $time;
-         animation-delay: -$time*random(100)*.01;
-         }
-       .confetti:nth-child(#{$i}) .rotate {
-         $time: 1s + random(100)*.01s;
-         animation-duration: $time;
-         animation-delay: -$time*random(100)*.01;
-         }
-     }
-     
-     @keyframes drift {
-       0% {
-         transform: skewY(10deg) translate3d(-250%, 0, 0);
-       }
-       100% {
-         transform: skewY(-10deg) translate3d(250%, 0, 0);
-       }
-     }
-     @keyframes driftRotate {
-       0% {
-         transform: rotateX(0) ;
-       }
-       100% {
-         transform: rotateX(360deg);
-       }
-     }
-    
-     </style>
-     
+    <meta charset="utf-8">
+    <title>Web Designing Company in Nagpur -Mobile App, Software</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" defer="true"></script>
+
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
 
 
-    <div id="confetti-container">
-        <div class="card" style="width: 18rem; margin: auto;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><a href="https://g.page/technocratasterisc?share"><i class="fa fa-map-marker-alt me-2"></i>Nagpur's Leading Website Design & Digital Marketing Company</a></small>
+                    <small class="me-3 text-light"><a href="tel:91-7744822228"><i class="fa fa-phone-alt me-2"></i>+91 7744822228</a></small>
+                    <small class="text-light"><a href="mailto: hello@asterisc.com"><i class="fa fa-envelope-open me-2"></i>hello@asterisc.in</a></small>
+                </div>
             </div>
-          </div>
-  </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/AsteriscI"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/technocrat.asterisc"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/asterisc-computer-705522198/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/asterisc.in/"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.youtube.com/channel/UC874req7IgQzGOZ1MfTMlVA"><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle " href="https://www.instagram.com/asterisc.in/"><i class="fab fa-pinterest fw-normal"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
 
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h2 class="m-0"><i class></i>Asterisc<i class></i>Technocrat</h2>
+                        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="feature.html" class="nav-item nav-link">Our features</a>
+                    <a href="internship.html" class="nav-item nav-link">Internship</a>
+                    <a href="Careers.html" class="nav-item nav-link">Career</a>
+
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+              
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary  bg-header-1" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Document Verification</h1>
+                    <i class="far fa-circle text-white px-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
 
 
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  
+    <!-- Full Screen Search End -->
 
-<script>
 
-var confettiShower = [];
-var numConfettis = 200;
-var container = document.getElementById('confetti-container');
-var colors = [
-  "#00FF73  ",
-  "#6C4AE2",
-  "#FDDA00 ",
-  "#DB27DB ",
-  "#FA405A ",
-  "#51EFFC ",
-  "#EB640A "
-];
+<!--us end-->
+    <!-- Team Start -->
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container flex justify-content-center text-center py-2">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Your document has been succesfully verified.</h5>
+            </div>
+            <img class="img-fluid mx-auto" src="./img/iop.gif"/>
+        </div>
+    </div>
+   
+  
+    <!-- Footer Start -->
+    <div class="container-fluid bgs text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="bg-dark d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h2 class="m-0 text-white"><i ></i>AsteriscTechnocrat</h2>
+                        </a>
+                        <p class="mt-3 mb-4">is a innovative on e-commerce company based in Nagpur. With 22+ teams & we are leading the tech provision charge for top brands on social media & searching platforms with "secure access service any time & any where.</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Get In Touch</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0"><a href="https://g.page/technocratasterisc?share">AsteriscTechnocrat Pvt. Ldt 151, Friends Colony, Katol Road, Nagpur</a></p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0"><a href="mailto: hello@asterisc.com">hello@asterisc.in</a></p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0"><a href="tel:91-7744822228">+91-7744822228</a></p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="https://twitter.com/AsteriscI"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/technocrat.asterisc"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/in/asterisc-computer-705522198/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.instagram.com/asterisc.in/"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.youtube.com/channel/UC874req7IgQzGOZ1MfTMlVA"><i class="fab fa-youtube fw-normal"></i></a>
+                                <a class="btn btn-primary brn-square" href="https://in.pinterest.com/asteriscin"><i class="fab fa-pinterest fw-normal"></i></a>
 
-class Confetti {
-  constructor(x, y, w, h, c) {
-    this.w = Math.floor(Math.random() * 15 + 5);
-    this.h = this.w*1.2;
-    this.x = Math.floor(Math.random() * 100);
-    this.y = Math.floor(Math.random() * 100);
-    this.c = colors[Math.floor(Math.random() * colors.length)];
-  }
-  create() {
-			var newConfetti = '<div class="confetti" style="bottom:' + this.y +'%; left:' + this.x +'%;width:' +
-				this.w +'px; height:' + this.h +'px;"><div class="rotate"><div class="askew" style="background-color:' + this.c + '"></div></div></div>';
-      container.innerHTML+= newConfetti; 
-      }
-  };
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Quick Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Website Design</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>eCommerce</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Logo Design</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Digital Marketing</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Mobile Apllication</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Web Maintenance</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Popular Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Software Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Mobile App Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Web App Development</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>IT Counsulting Services</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>SEO Services & Support</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Branding</a>
+                              <!-- <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #250025;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0"> <a class="text-white border-bottom" href="#"> </a>Copyright&nbsp @2018-23 |	Designed with &nbsp;<i class="fa fa-heart"></class>
+                        </i> &nbsp;   by Asterisc Technocrat Pvt. Ltd. <a class="text-white border-bottom" href="https://htmlcodex.com"></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
-function animateConfetti() {
-  for (var i = 1; i <= numConfettis; i++) {
-    var confetti = new Confetti();
-    confetti.create();
-  }
-  var confettis = document.querySelectorAll('.confetti');
-  for (var i = 0; i < confettis.length; i++) {
-    var opacity = Math.random() + 0.1;
-    var animated = confettis[i].animate([
-      { transform: 'translate3d(0,0,0)', opacity: opacity },
-      { transform: 'translate3d(20vw,100vh,0)', opacity: 1 }
-    ], {
-      duration: Math.random() * 3000 + 3000,
-      iterations: Infinity,
-      delay: -(Math.random() * 5000)
-    });
-   confettiShower.push(animated);
-  }
-}
-animateConfetti();
-</script>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- <script src="lib/wow/wow.min.js"></script> -->
+      <!-- <script src="lib/easing/easing.min.js"></script> --></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
