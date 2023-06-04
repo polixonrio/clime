@@ -450,7 +450,7 @@ h6 {
 }
 
 .bg-header-1 {
-  background: linear-gradient(rgba(51, 26, 67, 0.7), rgba(44, 20, 102, 0.7)), url(./img/us.webm) center center no-repeat;
+  background: linear-gradient(rgba(51, 26, 67, 0.7), rgba(44, 20, 102, 0.7)), url(../img/us.webp) center center no-repeat;
   background-size: cover
 }
 
