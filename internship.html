@@ -23,10 +23,9 @@
       href="./css/style-internship.css"
       rel="stylesheet"
     />
-    <link
-      href="./css/bootstrap-internship.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -110,6 +109,94 @@
   position: absolute;
   object-fit: cover;
   z-index: 0;
+}
+
+
+details div {
+	border-left: 2px solid #800080;
+	border-right: 2px solid #800080;
+	border-bottom: 2px solid #800080;
+	padding: 1.5em;
+}
+
+details div > * + * {
+	margin-top: 1.5em;
+}
+
+details + details {
+	margin-top: .5rem;
+}
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	border: 2px solid #800080;
+	padding: .75em 1em;
+	cursor: pointer;
+	position: relative;
+	padding-left: calc(1.75rem + .75rem + .75rem);
+}
+
+summary:before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: .75rem;
+	content: "↓";
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: #800080;
+	color: #FFF;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+  padding-bottom: 1%;
+}
+
+details[open] summary {
+	background-color: #eee;
+}
+
+details[open] summary:before {
+	content: "↑";
+}
+
+summary:hover {
+	background-color: #eee;
+}
+
+/* a {
+	color: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: 0 1px 0 0;
+} */
+
+a:hover {
+	box-shadow: 0 3px 0 0;
+}
+
+code {
+	font-family: monospace;
+	font-weight: 600;
+}
+#blm {
+  font-family: "Inter", sans-serif !important;
+	line-height: 1.5 !important;
+	min-height: 60vh !important;
+	font-size: 1.25rem !important;
+  width: 90% !important;
+	max-width: 600px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-bottom: 5rem !important;
 }
 
     </style>
@@ -216,7 +303,7 @@
       </nav>
 
       <div class="video-container">
-        <video autoplay muted loop id="bg-video">
+        <video  autoplay  playsinline muted loop id="bg-video">
             <source src="./img/us.webm" type="video/webm">
             <!-- Add additional source elements for different video formats if needed -->
           </video>
@@ -907,9 +994,71 @@ src="./img/shutterstock_1033446238_ki2opc_c_scale,w_500.webp"
         </div>
       </div>
     </div>
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+          <h1 class="mb-0">FAQ</h1>
+      </div>
+          <div class="row g-5">
+              <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                <img src="img/dqr.webp" style="	border: 2px solid #800080 !important;" alt="">
+              </div>
+           
+              <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                <div id="blm">
+                  <details open>
+                    <summary>
+                      How To Apply For Internships?
+                    </summary>
+                    <div>
+                      To Apply For Upcoming Batch Of Internship You Need To Fill The Interest Form In Thst Specific Domain, After That You Will Directly Receive The Selection Certificate From Us If Selected.
+
+                    </div>
+                  </details>
+                  <details>
+                    <summary>
+                      How To Fill The Interest Form?
+                    </summary>
+                    <div>
+                      You Will Get The Interest Form Of All The Internships Domain In Above Mentioned Internship Column. Please Click On Apply Now Button, Your Response Will Help Us To Understand Your Current Skills And Need For Training During The Internship If Any.
+
+                    </div>
+                  </details>
+                  <details>
+                    <summary>
+                      What type of content can I have inside one of these?
+                    </summary>
+                    <div>
+                      If You Have Filled All The Required Field In Interest Form Correctly, You Will Receive A Selection Certificate From Us Before Your Internship Starts. All Importent Information And Anouncements Related To Internship Are Communicated Through The Discussion From Asteric Technocrat Network On Linkedin.
+
+                    </div>
+                  </details>
+                  <details>
+                    <summary>
+                      What Will Be The Duration Of Internship?
+                    </summary>
+                    <div>
+                      In Every Domain Duration Of Internship Is 4 Weeks.
+
+                    </div>
+                  </details>
+                  <details>
+                    <summary>
+                      I Have Completed My Tasks Well Before Deadline.When Will I Get A Certificate?                    </summary>
+                    <div>
+                      You Can Submit Your Task Through Task Submission Form If You Have Received It Or Wait For It To Be Shared. If You Have Submitted The Task Before The Deadline Please Expect Your Completion Certificate In The 1st Week Of Next Month.
 
 
 
+                    </div>
+                  </details>
+                </div>
+            
+              </div>
+          </div>
+      </div>
+  </div>
+  
     <!-- Footer Start -->
     <div
       class="container-fluid bgs text-light mt-5 wow fadeInUp"
