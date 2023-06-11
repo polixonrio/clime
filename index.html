@@ -43,31 +43,33 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><a href="https://g.page/technocratasterisc?share"><i class="fa fa-map-marker-alt me-2"></i>Nagpur's Leading Website Design & Digital Marketing Company</a></small>
-                    <small class="me-3 text-light"><a href="tel:91-7744822228"><i class="fa fa-phone-alt me-2"></i>+91-7744822228</a></small>
-                    <small class="text-light"><a href="mailto: hello@asterisc.com"><i class="fa fa-envelope-open me-2"></i>hello@asterisc.in</a></small>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/AsteriscI"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/technocrat.asterisc"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/asterisc-computer-705522198/"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/asterisc.in/"><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.youtube.com/channel/UC874req7IgQzGOZ1MfTMlVA"><i class="fab fa-youtube fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle " href="https://in.pinterest.com/asteriscin"><i class="fab fa-pinterest fw-normal"></i></a>
+   <!-- Topbar Start -->
+   <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+    <div class="row gx-0">
+        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <small class="me-3 text-light"><a href="https://g.page/technocratasterisc?share"><i class="fa fa-map-marker-alt me-2"></i>Nagpur's Leading Website Design & Digital Marketing Company</a></small>
+                <small class="me-3 text-light"><a href="tel:91-7744822228"><i class="fa fa-phone-alt me-2"></i>+91-7744822228</a></small>
+                <small class="text-light"><a href="mailto: hello@asterisc.com"><i class="fa fa-envelope-open me-2"></i>hello@asterisc.in</a></small>
+            </div> 
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <button onclick="darkTheme()" class="btn btn-sm  me-5">
+                <img src="img/darkTheme.webp" height="25px" width="25px" class=""></img>    
+                </button>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/AsteriscI"><i class="fab fa-twitter fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/technocrat.asterisc"><i class="fab fa-facebook-f fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/asterisc-computer-705522198/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/asterisc.in/"><i class="fab fa-instagram fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.youtube.com/channel/UC874req7IgQzGOZ1MfTMlVA"><i class="fab fa-youtube fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle " href="https://in.pinterest.com/asteriscin"><i class="fab fa-pinterest fw-normal"></i></a>
 
-                </div>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
-
+</div>
+<!-- Topbar End -->
 
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
@@ -75,7 +77,7 @@
             <a href="index.html" class="navbar-brand p-0">
                 <h2 class="m-0"><i class></i>Asterisc<i class></i>Technocrat</h2>
             </a>
-            <button class="navbar-toggler" aria-label="Hamburger Menu"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -86,9 +88,10 @@
                     <a href="feature.html" class="nav-item nav-link">Our features</a>
                     <a href="internship.html" class="nav-item nav-link">Internship</a>
                     <a href="Careers.html" class="nav-item nav-link">Career</a>
+                    <a href="blog.html" class="nav-item nav-link">blog</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
 
-                </div> 
+                      
             </div>
         </nav>
 
@@ -1015,6 +1018,18 @@
             .catch(error => console.error('Error!', error.message))
         })
       </script>
+        <!--for darkTheme-->
+     
+      
+        <script>
+            function darkTheme() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+               if(document.body.contains("dark-mode")){
+    
+               }
+            }
+            </script>  
 </body>
 
 </html>
