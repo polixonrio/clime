@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .testimonial-two blockquote p:before {
+    font-family: 'Playfair Display';
+    font-size: 54px;
+    color: #0cb4ce;
+    font-weight: 900;
+    left: 10px;
+    color: #FFF;
+    content: "“";
+    font-style: normal;
+    line-height: 1;
+    position: absolute;
+    top: 5px;
+    font-size: 45px;
+}
+
+.testimonial-two blockquote p:after {
+    font-family: 'Playfair Display';
+    font-size: 54px;
+    color: #0cb4ce;
+    content: "”";
+    font-size: 80px;
+    font-style: normal;
+    line-height: 1;
+    position: absolute;
+    bottom: -0.5em;
+    right: 10px;
+    font-weight: 900;
+    transform: scaleY(-1);
+    font-size: 45px;
+    bottom: -5px;
+}
+
+
+.testimonial-two blockquote {
+    padding: 15px 15px 15px 48px;
+    position: relative;
+}
+
+.testimonial-two blockquote p:before,
+.testimonial-two blockquote p:after {
+    color: #0cb4ce;
+    font-weight: 900;
+}
+
+.testimonial-two blockquote p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.testimonial-two .testimonial-author p {
+    color: #999;
+    margin: 0 0 0 25px;
+    text-align: left;
+}
+
+.testimonial-two .testimonial-author strong {
+    display: block;
+    padding-top: 10px;
+    margin-bottom: -2px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #444;
+}
+
+.testimonial-two .testimonial-author span {
+    color: #666;
+    display: block;
+    font-size: 12px;
+}
+
+.testimonial-two .testimonial-author .testimonial-author-thumbnail {
+    float: left;
+    margin-right: 15px;
+    width: auto;
+}
+
+.testimonial-two .testimonial-author img {
+    max-width: 55px;
+}
+
+.testimonial-two .testimonial-author {
+    margin-left: 12px;
+    margin-bottom: 15px;
+}
+
+
+.testimonial-two .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 0px;
+}
+
+.testimonial-two .owl-theme .owl-dots {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.testimonial-two .owl-carousel .owl-dots .owl-dot.active span, 
+.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span {
+       border-color: #0cb4ce;
+}
+
+.testimonial-two .owl-carousel .owl-dots .owl-dot.active span:before, 
+.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span:before {
+    background-color: #0cb4ce;
+}
+
+
+
+
+.testimonial-three .testimonial-image {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.testimonial-three .testimonial-content {
+    overflow: hidden;
+}
+
+.testimonial-three .testimonial-meta {
+    position: relative;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+
+.testimonial-three .testimonial-name {
+    display: block;
+}
+
+
+.testimonial-three .testimonial-three-col {
+    padding-bottom: 35px;
+}
+
+.testimonial-three .testimonial-three-col {
+    border-right-style: dashed;
+    border-right-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-right-color: #ddd;
+    border-bottom-color: #ddd;
+    padding: 25px;
+}
+
+.testimonial-three .testimonial-three-col:hover {
+   background-color:#f7f7f7;
+}
+
+.alternate-color .testimonial-three .testimonial-three-col:hover {
+   background-color:white;
+}
+
+.testimonial-three.testimonial-three--col-two .testimonial-three-col:nth-child(2n) {
+    border-right: none;
+}
+
+.testimonial-three.testimonial-three--col-two .testimonial-three-col:nth-last-child(-n+2),
+.testimonial-three.testimonial-three--col-two .testimonial-three-col:last-child {
+    border-bottom: none;
+}
+
+.testimonial-three.testimonial-three--col-three .testimonial-three-col:nth-child(3n) {
+    border-right: none;
+}
+
+.testimonial-three.testimonial-three--col-three .testimonial-three-col:nth-last-child(-n+3),
+.testimonial-three.testimonial-three--col-three .testimonial-three-col:nth-last-child(-n+2),
+.testimonial-three.testimonial-three--col-three .testimonial-three-col:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+.testimonial-four .testimonial-author .testimonial-author-thumbnail {
+   float: left;
+   margin-right: 15px;
+   width: auto;
+}
+
+.testimonial-four .testimonial-author img {
+   max-width: 55px;
+}
+
+.testimonial-four .testimonial-author strong {
+   display: block;
+   padding-top: 10px;
+   margin-bottom: -2px;
+   font-weight: 500;
+   font-size: 14px;
+   color: #444;
+}
+
+.testimonial-four .testimonial-author span {
+   color: #666;
+   display: block;
+   font-size: 12px;
+}
+
+.testimonial-four blockquote {
+   padding: 30px;
+   width: 100%;
+   border-radius: 4px;
+   position: relative;
+   margin-bottom: 20px;
+   padding-bottom: 25px;
+   border: 2px solid #eaeaea;
+}
+
+.testimonial-four blockquote::after {
+   content: "";
+   border-right: 2px solid #eaeaea;
+   border-bottom: 2px solid #eaeaea;
+   -webkit-transform: rotate(55deg);
+   -moz-transform: rotate(55deg);
+   -ms-transform: rotate(55deg);
+   -o-transform: rotate(55deg);
+   transform: rotate(55deg);
+   position: absolute;
+   left: 55px;
+   bottom: -12px;
+   width: 15px;
+   height: 21px;
+   overflow: hidden;
+   background: white;
+}
+
+.testimonial-four .owl-theme .owl-nav.disabled + .owl-dots {
+   position: absolute;
+   float: right;
+   text-align: right;
+   right: 3px;
+   bottom: 40px;
+}
+
+.testimonial-four .testimonial-author {
+   position: relative;
+   overflow: hidden;
+}
+
+.testimonial-four blockquote:hover::after {
+   border-right: 2px solid #0cb4ce;
+   border-bottom: 2px solid #0cb4ce;
+}
+
+.testimonial-four blockquote:hover {
+   border: 2px solid #0cb4ce;
+}
+
+
+
+
+
+.testimonial-five blockquote p {
+    font-weight: 400;
+    font-size: 14.58px;
+    line-height: 1.6;
+    margin-bottom:0;
+}
+
+.testimonial-five .testimonial-author .testimonial-author-thumbnail {
+   float: left;
+   margin-right: 15px;
+   width: auto;
+}
+
+.testimonial-five .testimonial-author img {
+   max-width: 55px;
+}
+
+.testimonial-five .testimonial-author strong {
+   display: block;
+   padding-top: 10px;
+   margin-bottom: -2px;
+   font-weight: 600;
+   font-size: 13px; 
+}
+
+.testimonial-five .testimonial-author span {
+   color: #666;
+   display: block;
+   font-size: 12px;
+}
+
+.testimonial-five blockquote {
+   padding: 32px 41px 37px;
+   width: 100%;
+   border-radius: 4px;
+   position: relative;
+   margin-bottom: 30px; 
+   border: 0px solid #eaeaea;
+   background-color: #f7f7f7;
+}
+
+.testimonial-five blockquote::after {
+   content: "";
+   border-right: 0px solid #eaeaea;
+   border-bottom: 0px solid #eaeaea;
+   -webkit-transform: rotate(55deg);
+   -moz-transform: rotate(55deg);
+   -ms-transform: rotate(55deg);
+   -o-transform: rotate(55deg);
+   transform: rotate(55deg);
+   position: absolute;
+   left: 55px;
+   bottom: -10px;
+   width: 15px;
+   height: 21px;
+   overflow: hidden;
+   background: #f7f7f7;
+}
+
+.testimonial-five.testimonial-light blockquote{
+   background-color:white;
+}
+.testimonial-five.testimonial-light blockquote::after {
+   background: white;
+}
+
+
+.testimonial-five .owl-theme .owl-nav.disabled + .owl-dots {
+   position: absolute;
+   float: right;
+   text-align: right;
+   right: 3px;
+   bottom: 40px;
+}
+
+.testimonial-five .testimonial-author {
+   position: relative;
+   overflow: hidden;
+}
+
+.testimonial-five blockquote:before {
+    content: "“";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 170px;
+    color: rgba(189, 189, 189, 0.2);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <section class="section-medium section-arrow--bottom-center section-arrow-primary-color bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-white text-center">
+                    <h2 class="section-title "> What Others Say About Us</h2>
+                    <p class="section-sub-title">
+                        We are a passionate digital design agency that specializes in beautiful and easy-to-
+                        <br> use digital design &amp; web development services.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-primary t-bordered">
+        <div class="container">
+            <div class="row testimonial-three testimonial-three--col-three">
+                <div class="col-md-4 testimonial-three-col">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-image" itemprop="image">
+                            <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>
+                                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            </p>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
+                            <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 testimonial-three-col">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-image" itemprop="image">
+                            <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar2.png">
+                        </div>
+    
+                        <div class="testimonial-content">
+                            <p>
+                                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                            </p>
+                        </div>
+    
+                        <div class="testimonial-meta">
+                            <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
+                            <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 testimonial-three-col">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-image" itemprop="image">
+                            <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar3.png">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>
+                                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            </p>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
+                            <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 testimonial-three-col">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-image" itemprop="image">
+                            <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar4.png">
+                        </div>
+    
+                        <div class="testimonial-content">
+                            <p>
+                                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                            </p>
+                        </div>
+    
+                        <div class="testimonial-meta">
+                            <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
+                            <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 testimonial-three-col">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-image" itemprop="image">
+                            <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar5.png">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>
+                                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            </p>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
+                            <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#">Media Wiki</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 testimonial-three-col">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-image" itemprop="image">
+                            <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                        </div>
+    
+                        <div class="testimonial-content">
+                            <p>
+                                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                            </p>
+                        </div>
+    
+                        <div class="testimonial-meta">
+                            <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
+                            <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="mb-2 text-center">What people say</h2>
+                  <p class="mb-5 text-center">Masonry testimonial cards grid</p>
+              </div>
+              <div class="col-12">
+                  <div class="card-columns">
+      
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <blockquote class=" ">
+      
+                                  <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                  <p class=" m-0 text-muted ">
+                                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.
+                                  </p>
+                                  <footer class="blockquote-footer small p-1">
+                                      <span class="small">John Doe
+                                <cite class="font-weight-bold">COMPANY NAME</cite>
+                              </span>
+                                  </footer>
+      
+                              </blockquote>
+                          </div>
+                      </div>
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <blockquote class=" ">
+      
+                                  <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                  <p class=" m-0 text-muted ">
+                                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                  <footer class="blockquote-footer small p-1">
+                                      <span class="small">John Doe
+                                <cite class="font-weight-bold">COMPANY NAME</cite>
+                              </span>
+                                  </footer>
+      
+                              </blockquote>
+                          </div>
+                      </div>
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <blockquote class=" ">
+      
+                                  <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                  <p class=" m-0 text-muted ">
+                                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                  <footer class="blockquote-footer small p-1">
+                                      <span class="small">John Doe
+                                <cite class="font-weight-bold">COMPANY NAME</cite>
+                              </span>
+                                  </footer>
+      
+                              </blockquote>
+                          </div>
+                      </div>
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <blockquote class=" ">
+      
+                                  <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                  <p class=" m-0 text-muted ">
+                                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                  <footer class="blockquote-footer small p-1">
+                                      <span class="small">John Doe
+                                <cite class="font-weight-bold">COMPANY NAME</cite>
+                              </span>
+                                  </footer>
+      
+                              </blockquote>
+                          </div>
+                      </div>
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <blockquote class=" ">
+      
+                                  <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                  <p class=" m-0 text-muted ">
+      
+                                      Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                  <footer class="blockquote-footer small p-1">
+                                      <span class="small">John Doe
+                                <cite class="font-weight-bold">COMPANY NAME</cite>
+                              </span>
+                                  </footer>
+      
+                              </blockquote>
+                          </div>
+                      </div>
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <blockquote class=" ">
+      
+                                  <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                  <p class=" m-0 text-muted ">
+                                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                  <footer class="blockquote-footer small p-1">
+                                      <span class="small">John Doe
+                                <cite class="font-weight-bold">COMPANY NAME</cite>
+                              </span>
+                                  </footer>
+                              </blockquote>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </section>
+</body>
+</html>
