@@ -227,7 +227,107 @@ code {
 .bi-arrow-up::before {
   content: "\f148";
 }
+blockquote{margin:0 0 1rem;}
+.blockquote-footer{display:block;font-size:80%;color:#6c757d;}
+.blockquote-footer::before{content:"\2014\00A0";}
+.cont{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+@media (min-width:576px){
+.cont{max-width:540px;}
+}
+@media (min-width:768px){
+.cont{max-width:720px;}
+}
+@media (min-width:992px){
+.cont{max-width:960px;}
+}
+@media (min-width:1200px){
+.cont{max-width:1140px;}
+}
+@media (min-width:576px){
+.cont{max-width:540px;}
+}
+@media (min-width:768px){
+.cont{max-width:720px;}
+}
+@media (min-width:992px){
+.cont{max-width:960px;}
+}
+@media (min-width:1200px){
+.cont{max-width:1140px;}
+}
+.bow{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px;}
+.bol-12{position:relative;width:100%;padding-right:15px;padding-left:15px;}
+.bol-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;}
+.bard{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem;}
+.bard-body{-ms-flex:1 1 auto;flex:1 1 auto;min-height:1px;padding:1.25rem;}
+.bard-columns .bard{margin-bottom:.75rem;}
+@media (min-width:576px){
+.bard-columns{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:1.25rem;-moz-column-gap:1.25rem;column-gap:1.25rem;orphans:1;widows:1;}
+.bard-columns .bard{display:inline-block;width:100%;}
+}
 
+.text-center{text-align:center!important;}
+.font-weight-bold{font-weight:700!important;}
+.text-muted{color:#6c757d!important;}
+@media print{
+*,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+blockquote{border:1px solid #adb5bd;page-break-inside:avoid;}
+
+.cont{min-width:992px!important;}
+}
+
+#owl-demo .item{
+  background: #42bdc2;
+  padding: 30px 0px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.owl-carousel .owl-video-tn {
+  background-size: cover;
+  padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+}
+
+.owl-video-frame {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.owl-video-frame iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  display: inline-block;
+}
+
+.owl-dot span {
+  width: 11px;
+  height: 11px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  margin: 5px 3px;
+}
+
+.owl-dot.active span {
+  background-color: #000;
+}
     </style>
   </head>
 
@@ -1023,7 +1123,7 @@ src="./img/shutterstock_1033446238_ki2opc_c_scale,w_500.webp"
         </div>
       </div>
     </div>
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid pt-5 wow fadeInUp" data-wow-delay="0.1s">
       <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
           <h1 class="mb-0">FAQ</h1>
@@ -1097,7 +1197,248 @@ src="./img/shutterstock_1033446238_ki2opc_c_scale,w_500.webp"
           </div>
       </div>
   </div>
+
   
+  
+  <section class="pb-5">
+    <div class="cont">
+        <div class="bow">
+            <div class="bol-12">
+              <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">What Our Students Say</h5>
+            </div>
+            </div>
+            <div class="bol-12">
+                <div class="bard-columns">
+
+                    <div class="bard mb-4">
+                        <div class="bard-body">
+                            <blockquote class=" ">
+
+                          
+                                <p class=" m-0 text-muted ">
+                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
+                                    Aenean sit amet felis dolor, in sagittis nisi.
+                                </p>
+                                <p class=" small p-1">
+                                    <span class="small">John Doe
+                                        <cite class="font-weight-bold">COMPANY NAME</cite>
+                                    </span>
+                                  </p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bard mb-4">
+                        <div class="bard-body">
+                            <blockquote class=" ">
+
+                           
+                                <p class=" m-0 text-muted ">
+                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
+                                    Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                <p class=" small p-1">
+                                    <span class="small">John Doe
+                                        <cite class="font-weight-bold">COMPANY NAME</cite>
+                                    </span>
+                                  </p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bard mb-4">
+                        <div class="bard-body">
+                            <blockquote class=" ">
+
+                           
+                                <p class=" m-0 text-muted ">
+                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
+                                    Aenean sit amet felis dolor, in sagittis nisi. Etiam sed iaculis libero, at
+                                    euismod massain venenatis ligula. </p>
+                                <p class=" small p-1">
+                                    <span class="small">John Doe
+                                        <cite class="font-weight-bold">COMPANY NAME</cite>
+                                    </span>
+                                  </p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bard mb-4">
+                        <div class="bard-body">
+                            <blockquote class=" ">
+
+                          
+                                <p class=" m-0 text-muted ">
+                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
+                                    Aenean sit amet felis dolor, in sagittis nisi. Etiam sed iaculis libero, at
+                                    euismod massain venenatis ligula. </p>
+                                <p class=" small p-1">
+                                    <span class="small">John Doe
+                                        <cite class="font-weight-bold">COMPANY NAME</cite>
+                                    </span>
+                                  </p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bard mb-4">
+                        <div class="bard-body">
+                            <blockquote class=" ">
+
+                             
+                                <p class=" m-0 text-muted ">
+
+                                    Etiam sed iaculis libero, at euismod massain venenatis ligula. </p>
+                                <p class=" small p-1">
+                                    <span class="small">John Doe
+                                        <cite class="font-weight-bold">COMPANY NAME</cite>
+                                    </span>
+                                  </p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bard mb-4">
+                        <div class="bard-body">
+                            <blockquote class=" ">
+
+                                
+                                <p class=" m-0 text-muted ">
+                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
+                                    Aenean sit amet felis dolor, in sagittis nisi. Etiam sed iaculis libero, at
+                                    euismod massain venenatis ligula. </p>
+                                <p class=" small p-1">
+                                    <span class="small">John Doe
+                                        <cite class="font-weight-bold">COMPANY NAME</cite>
+                                    </span>
+                                  </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container"> 
+  
+  <div class="row">
+  
+    <div class="col-sm-12"> 
+    
+      <div class="owl-carousel owl-theme"> 
+        
+    <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+    <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div> 
+    <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+    <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div> 
+    <div class="item-video" data-merge="4"><a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
+    <div class="item-video" data-merge="5"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
+    <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div> 
+</div> 
+    
+    </div>
+  
+  </div>
+
+</div>
+<div id="owl-demo" class="owl-carousel owl-theme">
+          
+  <div class=""> <div class="embed-responsive embed-responsive-16by9">
+    <iframe
+    class="rounded-2 lazy-iframe"
+      loading="lazy"
+      width="280"
+      srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/wevIc9MhtIk?autoplay=1><img src=https://img.youtube.com/vi/wevIc9MhtIk/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"
+
+      src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
+      frameborder="0"
+      allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      title="College Students Develop mobile app in lockdown and start earning | NAGPUR"
+      data-src="https://www.youtube-nocookie.com/embed/wevIc9MhtIk"
+      id="widget2"
+    ></iframe>
+  </div></div>
+  <div class="item"><h1>2</h1></div>
+  <div class="item"><h1>3</h1></div>
+  <div class="item"><h1>4</h1></div>
+  <div class="item"><h1>5</h1></div>
+  <div class="item"><h1>6</h1></div>
+  <div class="item"><h1>7</h1></div>
+  <div class="item"><h1>8</h1></div>
+  <div class="item"><h1>9</h1></div>
+  <div class="item"><h1>10</h1></div>
+  <div class="item"><h1>11</h1></div>
+  <div class="item"><h1>12</h1></div>
+ 
+</div>
+
+  <!-- Team Start -->
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Our Mentors</h5>
+        </div>
+        <div class="row g-5">
+            
+           
+            <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" loading="lazy" width="100" height="100" src="img/aachal.webp" alt="">
+                        
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Aachal</h4>
+                        <p class="text-uppercase m-0">Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" loading="lazy" width="100" height="100" src="img/priyanka.webp" alt="">
+                        
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Priyanka</h4>
+                        <p class="text-uppercase m-0">Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" loading="lazy" width="100" height="100" src="img/aditya.webp" alt="">
+                        
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Aaditya</h4>
+                        <p class="text-uppercase m-0">Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
+                <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" loading="lazy" width="100" height="100" src="img/ruchita.webp" alt="">
+                        
+                    </div>
+                    <div class="text-center py-4">
+                        <h4 class="text-primary">Ruchita</h4>
+                        <p class="text-uppercase m-0">Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Team End -->
+
     <!-- Footer Start -->
     <div
       class="container-fluid bgs text-light mt-5 wow fadeInUp"
@@ -1295,6 +1636,13 @@ src="./img/shutterstock_1033446238_ki2opc_c_scale,w_500.webp"
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
+      $('.owl-carousel').owlCarousel({
+    items: 4,
+    loop: true,
+    video: true,
+    lazyLoad: true
+}); 
+      
       jQuery.event.special.touchstart = {
         setup: function (_, ns, handle) {
           this.addEventListener("touchstart", handle, {
