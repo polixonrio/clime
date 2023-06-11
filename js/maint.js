@@ -78,10 +78,25 @@
     $(".testimonial-carousel").owlCarousel({
         smartSpeed: 1500,
         dots: true,
-        loop: false,
+        video: true,
+        loop: true,
         center: true,
-        
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
     });
+
 
 
     // Vendor carousel

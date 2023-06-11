@@ -277,6 +277,49 @@ blockquote{border:1px solid #adb5bd;page-break-inside:avoid;}
 .cont{min-width:992px!important;}
 }
 
+.owl-carousel .owl-video-tn {
+  background-size: cover;
+  padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+}
+
+.owl-video-frame {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.owl-video-frame iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  display: inline-block;
+}
+
+.owl-dot span {
+  width: 11px;
+  height: 11px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  margin: 5px 3px;
+}
+
+.owl-dot.active span {
+  background-color: #000;
+}
+
+
     </style>
   </head>
 
@@ -1269,75 +1312,25 @@ src="./img/shutterstock_1033446238_ki2opc_c_scale,w_500.webp"
       </div>
   </div>
 
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
-            <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-            <div class="testimonial-item bg-light my-4">
-                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                    <img class="img-fluid rounded" src="img/testimonial-1.webp" style="width: 60px; height: 60px;" >
-                    <div class="ps-4">
-                        <h4 class="text-primary mb-1">Client Name</h4>
-                        <small class="text-uppercase">Profession</small>
-                    </div>
-                </div>
-                <div class="pt-4 pb-5 px-5">
-                    Asterisc Technocrat team has worked incredibly hard working and taken ownership of the best quality product development and support & enhancements projects as of making their own customized product. I would highly recommend Asterisc Team members for any such software project development.
-                </div>
-            </div>
-            <div class="testimonial-item bg-light my-4">
-                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                    <img class="img-fluid rounded" src="img/testimonial-2.webp" style="width: 60px; height: 60px;" >
-                    <div class="ps-4">
-                        <h4 class="text-primary mb-1">Client Name</h4>
-                        <small class="text-uppercase">Profession</small>
-                    </div>
-                </div>
-                <div class="pt-4 pb-5 px-5">
-                    Thanks to asterisc technocrat team it was a great experience with quality products & services "Great Development & supporting Team at this company! Great architect creativity skills knowledge, great ideas, best experience with creating many different types of apps.I am very thankful to your company                    </div>
-            </div>
-            <div class="testimonial-item bg-light my-4">
-                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                    <img class="img-fluid rounded" src="img/testimonial-3.webp" style="width: 60px; height: 60px;" >
-                    <div class="ps-4">
-                        <h4 class="text-primary mb-1">Client Name</h4>
-                        <small class="text-uppercase">Profession</small>
-                    </div>
-                </div>
-                <div class="pt-4 pb-5 px-5">
-                    Asterisc technocrat has an amazing team that works around the clock to deliver on all customers requests. They helping us create for a unique digital platform used in the restaurant application. Asterisc team helped us to build, fine-tune our new latest platform. The Food hotels & restaurants customers are highly recommends Asterisc Technocrat.
-                </div>
-            </div>
-            <div class="testimonial-item bg-light my-4">
-                <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                    <img class="img-fluid rounded" src="img/testimonial-4.webp" style="width: 60px; height: 60px;" >
-                    <div class="ps-4">
-                        <h4 class="text-primary mb-1">Client Name</h4>
-                        <small class="text-uppercase">Profession</small>
-                    </div>
-                </div>
-                <div class="pt-4 pb-5 px-5">
-                    Asterisc technocrat has an amazing team that works around the clock to deliver on all customers requests. They helping us create for a unique digital platform used in the restaurant application . From first contact to deployment of platform, and ongoing it has been a professional. Asterisc team helped us to build, fine-tune our new latest platform.
-                </div>
-            </div>
-            <div class="testimonial-item bg-light my-4">
-              <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                  <img class="img-fluid rounded" src="img/testimonial-4.webp" style="width: 60px; height: 60px;" >
-                  <div class="ps-4">
-                      <h4 class="text-primary mb-1">Client Name</h4>
-                      <small class="text-uppercase">Profession</small>
-                  </div>
-              </div>
-              <div class="pt-4 pb-5 px-5">
-                  Asterisc technocrat has an amazing team that works around the clock to deliver on all customers requests. They helping us create for a unique digital platform used in the restaurant application . From first contact to deployment of platform, and ongoing it has been a professional. Asterisc team helped us to build, fine-tune our new latest platform.
-              </div>
+     <!-- Testimonial Start -->
+     <div class="container-fluid  wow fadeInUp" data-wow-delay="0.1s">
+
+      <div class="container ">
+          <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+              <h5 class="fw-bold text-primary text-uppercase">Student Testimonial</h5>
+              <h2 class="mb-0">What Our Students Say About Us</h2>
           </div>
-        </div>
-    </div>
-</div>
+          <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+            <div class="testimonial-item" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=wevIc9MhtIk"></a></div>
+            <div class="testimonial-item" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=wevIc9MhtIk"></a></div>
+            <div class="testimonial-item" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=wevIc9MhtIk"></a></div>
+            <div class="testimonial-item" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=wevIc9MhtIk"></a></div>
+            <div class="testimonial-item" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=wevIc9MhtIk"></a></div>
+             
+          </div>
+      </div>
+  </div>
+  <!-- Testimonial End -->
 
   <!-- Team Start -->
   <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
